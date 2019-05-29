@@ -80,21 +80,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
-                if(newState ==RecyclerView.SCREEN_STATE_OFF){
-                    LinearLayoutManager layoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
-                    int firstVisibleItemPosition = layoutManager.findFirstVisibleItemPosition();
-                    int itemCount = recyclerView.getAdapter().getItemCount();
-                    if (firstVisibleItemPosition ==itemCount-1){
-                        page++;
-                        initData();
-                        adapter.notifyDataSetChanged();
-                    }
-                }
+
+
             }
 
             @Override
             public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
+
+
 
             }
         });
